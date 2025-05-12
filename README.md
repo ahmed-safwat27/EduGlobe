@@ -1,0 +1,2 @@
+# EduGlobe
+Educational website
