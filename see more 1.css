@@ -1,0 +1,150 @@
+body {
+  background: linear-gradient(45deg, rgba(124, 10, 10, 0.562), #111111, #0077ff75, #111111, #22ff2275);
+}
+
+.videos,
+.documents {
+  background: #333;
+  height: 400px;
+  width: 500px;
+  border-radius: 30px;
+  margin: 100px 20px 20px 20px;
+}
+
+.Ahmed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.see-more {
+  height: 30px;
+  width: 250px;
+  margin: 190px 0px 0px 120px;
+  background-color: #111111;
+  color: white;
+  font-weight: bolder;
+  font-style: italic;
+  transition: 0.4s;
+}
+
+.see-more:hover {
+  height: 50px;
+  width: 270px;
+  background-color: #11111191;
+  color: rgba(255, 255, 255, 0.808);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+h1 {
+  background: white;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+  z-index: 1000;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+nav.scrolled {
+  background-color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  background-color: #333;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  color: black;
+}
+
+#menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+.logo {
+  background-color: transparent;
+}
+
+.logo img {
+  height: 80px;
+  background: transparent;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 5px white);
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  nav a {
+      display: none;
+      width: 100%;
+      padding: 10px;
+  }
+
+  nav.active a {
+      display: block;
+  }
+
+  #menu-toggle {
+      display: block;
+      margin-left: 20px;
+      z-index: 1100; /* Ensure it stays on top */
+  }
+
+  /* Add padding to make sure there's space around the toggle button */
+  nav.active #menu-toggle {
+      padding: 15px;  /* Add space around the toggle button when the menu is active */
+      background: rgba(0, 0, 0, 0.6); /* Optional: add background to make it more visible */
+  }
+}

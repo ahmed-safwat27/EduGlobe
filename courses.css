@@ -1,0 +1,156 @@
+body {
+  background-color: #080808;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  padding: 140px 20px 50px;
+  background: radial-gradient(circle, #0066cc, #0099ff);
+  box-shadow: 0 0 20px #0066cc;
+  color: white;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px cyan; }
+  to { text-shadow: 0 0 20px cyan; }
+}
+
+.search-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#searchInput {
+  width: 60%;
+  max-width: 400px;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  background: #222;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.courses-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  z-index: 1;
+}
+
+.course-card {
+  background: linear-gradient(45deg, #00ffff, #0099ff);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px #00ffff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px;
+}
+
+.course-card:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 0 30px #00ffff;
+}
+
+.enroll-btn {
+  background: #ff0066;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  box-shadow: 0 0 10px #ff0066;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.enroll-btn:hover {
+  background: #ff0033;
+  box-shadow: 0 0 20px #ff0033;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+#navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#menu-toggle {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 16px 59px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#navbar a:hover {
+  color: cyan;
+}
+
+.logo img {
+  height: 80px;
+  transition: transform 0.3s ease, filter 0.5s ease;
+  filter: drop-shadow(0 0 10px cyan);
+}
+
+.logo img:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 20px cyan);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+  }
+
+  #navbar.active .nav-links {
+    display: flex;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+}

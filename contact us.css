@@ -1,0 +1,278 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar Styling */
+#navbar {
+  background: linear-gradient(90deg, #1e1e2f, #0077ff);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid #00c8ff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#nav-links {
+  display: flex;
+  align-items: center;
+  transition: right 0.3s ease;
+}
+
+#nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#nav-links a:hover {
+  color: #00c8ff;
+  transform: scale(1.1);
+}
+
+#nav-links a.active {
+  font-weight: bold;
+}
+
+.logo img {
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+#menu-toggle {
+  display: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Responsive Toggle Menu */
+@media (max-width: 768px) {
+  #nav-links {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 80%;
+    height: calc(100vh - 60px);
+    background-color: #1e1e2f;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 30px;
+  }
+
+  #nav-links.show {
+    right: 0;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+
+  #nav-links a {
+    margin: 20px 0;
+    font-size: 18px;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 60px;
+  margin-top: 70px;
+  background-color: #0077ff;
+  color: white;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.contact-details,
+.contact-form {
+  width: 45%;
+}
+
+.contact-details h2,
+.contact-form h2 {
+  font-size: 2rem;
+  color: #0077ff;
+  margin-bottom: 20px;
+}
+
+.contact-details p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-details i {
+  color: #0077ff;
+  margin-left: 10px;
+  font-size: 1.1rem;
+}
+
+.contact-details a {
+  color: #337ab7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #0077ff;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #005bb5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-section {
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .contact-details,
+  .contact-form {
+      width: 100%;
+      margin-bottom: 30px; /* إضافة مسافة بين الأقسام على الأجهزة الصغيرة */
+  }
+
+  .header {
+      padding: 40px 20px;
+      margin-top: 60px; /* تعديل الهامش العلوي على الأجهزة الصغيرة */
+  }
+
+  #nav-links {
+      position: fixed;
+      top: 60px; /* تعديل الموضع ليتناسب مع ارتفاع الشريط العلوي */
+      right: -100%;
+      width: 80%;
+      height: calc(100vh - 60px); /* تعديل الارتفاع */
+      background-color: #1e1e2f;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      transition: right 0.3s ease;
+  }
+
+  #navbar a {
+      margin: 15px 0;
+      font-size: 18px;
+  }
+
+  #navbar .logo img {
+      height: 60px; /* تصغير الشعار على الأجهزة الصغيرة */
+  }
+
+  #menu-toggle {
+      display: block;
+      font-size: 28px; /* تكبير أيقونة القائمة على الأجهزة الصغيرة */
+  }
+}
+/* Animation for smooth toggle */
+@keyframes slideDown {
+  from {
+      transform: translateY(-100%);
+  }
+ 
+  to {
+      transform: translateY(0);
+  }
+}

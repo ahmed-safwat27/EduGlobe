@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Students - EduGlobe</title>
+  <link rel="stylesheet" href="students.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <nav id="navbar">
+    <div id="menu-toggle">&#9776;</div>
+    <a href="index.html" class="logo">
+      <img src="ChatGPT Image Apr 20, 2025, 11_10_56 AM.png" alt="EduGlobe Logo">
+    </a>
+    <a href="teacher.html"><i class="fas fa-chalkboard-teacher"></i> Teachers</a>
+    <a href="courses.html"><i class="fas fa-book"></i> Courses</a>
+    <a href="services.html"><i class="fas fa-cogs"></i> Services</a>
+    <a href="contact us.html"><i class="fas fa-phone-alt"></i> Contact us</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+</nav>
+<button id="backToTop" title="Go to top">↑</button>
+
+  <div class="students-container">
+    <h1>Students</h1>
+
+
+    <table id="students-list">
+      <thead>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <form id="student-form">
+      <label for="first-name" class="name">First Name:</label>
+      <input type="text" id="first-name" required placeholder="Enter first name" />
+      <br>
+      <br>
+
+      <label for="second-name" class="name">Second Name:</label>
+      <input type="text" id="second-name" required placeholder="Enter second name" />
+      <br>
+      <br>
+
+      <label for="email" class="name">Email:</label>
+      <input type="email" id="email"required placeholder="Enter your email" />
+      <br>
+      <br>
+
+      <div class="container">
+        <label for="academic-year" class="name">Academic Year:</label>
+        <select id="academic-year" required>
+          <option value="" disabled selected>Select Academic Year</option>
+          <option value="First grade of primary school">First grade of primary school</option>
+          <option value="Second grade of primary school">Second grade of primary school</option>
+          <option value="Third grade of primary school">Third grade of primary school</option>
+          <option value="Fourth grade of primary school">Fourth grade of primary school</option>
+          <option value="Fifth grade of primary school">Fifth grade of primary school</option>
+          <option value="Sixth grade of primary school">Sixth grade of primary school</option>
+          <option value="First Grade of Preparatory School">First Grade of Preparatory School</option>
+          <option value="Second grade of middle school">Second grade of middle school</option>
+          <option value="Third grade of middle school">Third grade of middle school</option>
+          <option value="First grade of secondary school">First grade of secondary school</option>
+          <option value="Second grade of secondary school">Second grade of secondary school</option>
+          <option value="Third grade of secondary school">Third grade of secondary school</option>
+        </select>
+      </div>
+      <br>
+      <br>
+
+      <label for="phone-number" class="number">Phone Number:</label>
+      <input type="tel" id="phone-number" required pattern="[0-9]{10,15}" title="Enter a valid phone number (10 to 15 digits)" />
+      <br>
+      <br>
+
+      <label for="region" class="names">Region:</label>
+      <input type="text" id="region" required placeholder="Enter region" />
+      <br>
+      <br>
+
+      <label for="gender" class="name">Gender:</label>
+      <select id="gender" required>
+        <option value="" disabled selected>Choose Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+      <br>
+      <br>
+
+      <div id="toast-message" style="display:none;">
+        ✅ Your data has been sent successfully.
+      </div>
+
+      
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div id="success-message" class="success-message"></div>
+
+  <script src="students.js"></script>
+</body>
+</html>
+ 
